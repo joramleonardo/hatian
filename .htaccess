@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+<FilesMatch "^\.env|composer\.(json|lock)|package(-lock)?\.json|artisan">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
